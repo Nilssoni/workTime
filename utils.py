@@ -6,7 +6,7 @@ DATE_FMT = "%Y-%m-%d"
 def parse_time(/hhmm: str) -> datetime:
     # Returns a datetime object with today's date but we only care about time delta
     today = date.today()
-    return datetime.strptime(/hhmm, TIME_FMT).replace(year=today.year, month=today.month, day=today.day)
+    return datetime.strptime(hhmm, TIME_FMT).replace(year=today.year, month=today.month, day=today.day)
 
 def parse_date(yyyy_mm_dd: str) -> date:
     return datetime.strptime(yyyy_mm_dd, DATE_FMT).date()
