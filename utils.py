@@ -3,7 +3,7 @@ from datetime import datetime, date, timedelta
 TIME_FMT = "%H:%M"
 DATE_FMT = "%Y-%m-%d"
 
-def parse_time(/hhmm: str) -> datetime:
+def parse_time(hhmm: str) -> datetime:
     # Returns a datetime object with today's date but we only care about time delta
     today = date.today()
     return datetime.strptime(hhmm, TIME_FMT).replace(year=today.year, month=today.month, day=today.day)
